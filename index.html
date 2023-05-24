@@ -1,9 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<img src="https://cdn.discordapp.com/attachments/925933963762102272/974378128476622878/image0.jpg" class="ft">
-<style>
-.ft {
-  max-width: 100%;
-  height: auto;
-}
-</style>
+
+<head>
+    <style>
+        .ft {
+            max-width: 100%;
+            height: auto;
+            overflow: hidden;
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        #notice {
+            font-size: 18px;
+            background-color: #35a9c9;
+            background-image: linear-gradient(135deg, hsl(198, 54%, 44%) 25%, hsl(198, 68%, 61%));
+            border: 1px solid black;
+            border-radius: 10px;
+            position: fixed;
+            top: 10px;
+            max-height: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 280px;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+            z-index: 1000;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        #dismiss-button {
+            border: none;
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        #dismiss-button:hover {
+            color: darkgray;
+        }
+
+        #modalText {
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="notice">
+        <p id="modalText">🎉 Happy 17th Birthday Forde Todd 🎉</p>
+        <button id="dismiss-button">&times;</button>
+    </div>
+
+    <img src="https://cdn.discordapp.com/attachments/925933963762102272/974378128476622878/image0.jpg" class="ft">
+    <script src="./notice.js"></script>
+</body>
+
+</html>
