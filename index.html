@@ -10,6 +10,7 @@
             border: 0px;
             margin: 0px;
             padding: 0px;
+            animation: fadeIn 1s forwards;
 
         }
 
@@ -66,8 +67,28 @@
         <button id="dismiss-button">&times;</button>
     </div>
 
-    <img src="https://cdn.discordapp.com/attachments/925933963762102272/974378128476622878/image0.jpg" class="ft">
-    <script src="./notice.js"></script>
+    <img src="https://fordetodd.org/image0.jpg" class="ft">
 </body>
+
+<!-- make js to switch the image to image1 and back every 5 seconds with an animation -->
+<script>
+
+const image = document.querySelector(".ft");
+
+const images = ["image0.jpg", "image1.jpg"];
+const imagePath = "https://fordetodd.org/";
+let currentImage = 0;
+
+function changeImage() {
+    currentImage++;
+    if (currentImage > 1) {
+        currentImage = 0;
+    }
+    image.src = imagePath + images[currentImage];
+}
+
+setInterval(changeImage, 5000);
+</script>
+
 
 </html>
